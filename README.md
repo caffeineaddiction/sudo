@@ -1,7 +1,3 @@
-A framework for allowing / denying a WeakAuras to request to specific API calls that have been previously blocked by default.
-
-This is like unlocking Developer Mode in Android, it can allow you do to exactly what you want ... but it also allows you to pwn yourself if you dont read the code of the weakauras you import.
-
 The following functions are availible:
 
 `sudo.add(API_NAME, _G)`
