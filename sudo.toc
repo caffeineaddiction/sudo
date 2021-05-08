@@ -1,6 +1,12 @@
-## Interface: 11307
+## Interface: 90005
+## Interface-Classic: 11307
+## Interface-BC: 20501
 ## Title: sudo
 ## Author: CaffeineAddiction
-## Version: 0.1
+## Version: @project-version@
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: sudoSavedAccount
+## SavedVariablesPerCharacter: sudoSavedChar
 
 init.lua

@@ -14,21 +14,28 @@ local _debug = function(m)
   if debugMode then print("sudo: " .. m) end
 end
 
+
 local isSure = {}
 local areYouSure = function(aMsg, aCB)
+  -- Load Settings
+  if _G.sudoSavedAccount == nil then setglobal("sudoSavedAccount", {}) end
+  for k,v in pairs(_G.sudoSavedAccount) do isSure[k] = v end
+  if _G.sudoSavedChar == nil then setglobal("sudoSavedChar", {}) end
+  for k,v in pairs(_G.sudoSavedChar) do isSure[k] = v end
+
   StaticPopupDialogs["SUDO_ARE_YOU_SURE?"] = {
     text = aMsg,
     button1 = "Approve",
     button2 = "Deny",
     OnAccept = function()
       isSure[aMsg] = true
-      print("sudo: request sucessfuly approved"
+      print("sudo: request sucessfuly approved")
       -- TODO
       -- print("sudo: Choice can be made permanent, see documentation for details")
       aCB()
     end,
     OnCancel = function() 
-      print("sudo: request sucessfuly denied"
+      print("sudo: request sucessfuly denied")
       -- TODO
       -- print("sudo: Choice can be made permanent, see documentation for details")
     end,
