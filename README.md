@@ -19,21 +19,27 @@ This function will prompt the user, and if allowed will replace the restricted `
 ## Settings can be saved per Account or per Character by running the following commands:
 
 Default `sudo.su` to always approved for entire account:
+
 `/script sudoSavedAccount["Remove WeakAura Safety Features for the Blizzard API: 'ALL THE THINGS'?"] = true`
 
 Default `sudo.su` to always denied for entire account:
+
 `/script sudoSavedAccount["Remove WeakAura Safety Features for the Blizzard API: 'ALL THE THINGS'?"] = false`
 
 Default `sudo.su` to always prompt for entire account:
+
 `/script sudoSavedAccount["Remove WeakAura Safety Features for the Blizzard API: 'ALL THE THINGS'?"] = nil`
 
 Default `sudo.add` of a specific API to approved for entire account:
+
 `/script sudoSavedAccount["Remove WeakAura Safety Features for the Blizzard API: 'DeleteCursorItem'?"] = true`
 
 Default `sudo.su` to always approved for specific character:
+
 `/script sudoSavedChar["Remove WeakAura Safety Features for the Blizzard API: 'ALL THE THINGS'?"] = true`
 
 Default `sudo.add` of a specific API to approved for a specific character:
+
 `/script sudoSavedChar["Remove WeakAura Safety Features for the Blizzard API: 'DeleteCursorItem'?"] = true`
 
 By default everything is set to prompt, Character settings take priority over Account settings.
