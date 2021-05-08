@@ -1,0 +1,6 @@
+## Interface: 11307
+## Title: sudo
+## Author: CaffeineAddiction
+## Version: 0.1
+
+init.lua
