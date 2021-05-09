@@ -30,14 +30,12 @@ local areYouSure = function(aMsg, aCB)
     OnAccept = function()
       isSure[aMsg] = true
       print("sudo: request sucessfuly approved")
-      -- TODO
-      -- print("sudo: Choice can be made permanent, see documentation for details")
+      print("sudo: Choice can be made permanent, see documentation for details")
       aCB()
     end,
     OnCancel = function() 
       print("sudo: request sucessfuly denied")
-      -- TODO
-      -- print("sudo: Choice can be made permanent, see documentation for details")
+      print("sudo: Choice can be made permanent, see documentation for details")
     end,
     timeout = 0,
     whileDead = true,
