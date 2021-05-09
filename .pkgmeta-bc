@@ -1,0 +1,4 @@
+package-as: sudo
+
+ignore:
+  - README.md
