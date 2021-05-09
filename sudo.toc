@@ -7,6 +7,7 @@
 ## Notes: A framework for allowing / denying a WeakAuras request to specific API calls that have been previously blocked by default.
 ## X-Website: https://www.curseforge.com/wow/addons/sudo
 ## X-Curse-Project-ID: 479943
+## X-WoWI-ID: 25995
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: sudoSavedAccount
