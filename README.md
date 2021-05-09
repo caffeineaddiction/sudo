@@ -1,4 +1,8 @@
-# sudo
+DOWNLOADING SUDO
+
+When downloading Sudo be sure to rename the folder in your "Inferface/AddOns" to just "Sudo" and not "Sudo-main"
+
+# Sudo
 A framework for allowing / denying a WeakAuras request to specific API calls that have been previously blocked by default.
 
 This is like unlocking Developer Mode in Android, it can allow you to do exactly what you want ... but it also allows you to pwn yourself if you don't read the code of the weakauras you import.
