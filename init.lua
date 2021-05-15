@@ -1,5 +1,21 @@
 local __GLOBAL_NAMESPACE__ = _G
-local getGlobalNamespace = function() return __GLOBAL_NAMESPACE__ end
+
+-- https://github.com/WeakAuras/WeakAuras2/pull/3090
+local metaProxy = function(var)
+  if type(var) == 'function' then
+    return function(...) return var(...) end end
+  if type(var) == 'table' then
+    -- setmetatable was used in favor of a simple for k,v in pairs() to prevent
+    -- outdated instances of the global objects or the values it or its children
+    -- contain.
+    return setmetatable({}, { __index = function(self,k) return metaProxy(var[k]) end})
+  end
+  return var
+end
+
+-- a getter function is used along with metaProxy to prevent accidental polution
+-- of the global object. `setglobal` can be used to truly make something global
+local getGlobalNamespace = function() return metaProxy(__GLOBAL_NAMESPACE__) end
 
 setglobal("sudo", {})
 
@@ -13,7 +29,6 @@ local _debug = function(m)
   if m == nil then return end
   if debugMode then print("sudo: " .. m) end
 end
-
 
 local isSure = {}
 local areYouSure = function(aMsg, aCB)
