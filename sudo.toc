@@ -8,6 +8,7 @@
 ## X-Website: https://www.curseforge.com/wow/addons/sudo
 ## X-Curse-Project-ID: 479943
 ## X-WoWI-ID: 25995
+## X-Wago-ID: 0mKOJg6x
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: sudoSavedAccount
